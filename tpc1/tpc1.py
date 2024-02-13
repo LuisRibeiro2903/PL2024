@@ -1,5 +1,4 @@
 import sys
-import pdb
 
 class EMD_DTO:
 
@@ -20,11 +19,11 @@ class EMD_DTO:
 
     
 def populate_emd () -> list[EMD_DTO]:
-    pdb.set_trace()
     emd = []
     sys.stdin.readline() #Used to skip the csv header
     for line in sys.stdin:
         emd.append(parseLine(line.strip().split(',')))
+    return emd
 
 def parseLine (values : list[str]):
     return EMD_DTO(values[0],
@@ -37,8 +36,8 @@ def parseLine (values : list[str]):
 
 def category_csv(emd : list[EMD_DTO]):
     data = [['modalidade']]
-    tmp = [e.category for e in emd]
-    print(tmp)
+    data.append(sorted(set([e.category for e in emd])))
+    print(data)
 
 def aptos_csv(aptos, entradas):
     percentagem_aptos = (aptos / entradas) * 100
