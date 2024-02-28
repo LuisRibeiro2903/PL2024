@@ -1,6 +1,6 @@
 # TPC2
 
-**Título** Conversor básico de Markdown para html
+**Título** Conversor básico de Markdown para html\
 **Autor** Luís de Sá Ribeiro, A100608
 
 ## Objetivos
