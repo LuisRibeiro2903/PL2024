@@ -1,6 +1,6 @@
 # TPC1
 
-**Título** Análise de dados em csv
+**Título** Análise de dados em csv\
 **Autor** Luís de Sá Ribeiro, A100608
 
 ## Objetivos
