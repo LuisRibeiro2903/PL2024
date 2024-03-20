@@ -1,0 +1,12 @@
+{
+    "stock" : [
+        {"cod": "A23", "nome": "água 0.33cl", "quant": 8, "preco": 0.7},
+        {"cod": "B45", "nome": "pepsi max 33cl", "quant": 15, "preco": 1.5},
+        {"cod": "C67", "nome": "batatas fritas", "quant": 20, "preco": 1.2},
+        {"cod": "D89", "nome": "chocolate", "quant": 10, "preco": 2.0},
+        {"cod": "E12", "nome": "barras de cereal", "quant": 25, "preco": 0.8},
+        {"cod": "F34", "nome": "biscoitos", "quant": 18, "preco": 0.55},
+        {"cod": "G56", "nome": "sumo laranja 33cl", "quant": 12, "preco": 1.2},
+        {"cod": "H78", "nome": "sanduíches", "quant": 30, "preco": 2.5}
+    ]
+}
