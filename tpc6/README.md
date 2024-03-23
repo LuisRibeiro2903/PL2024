@@ -24,23 +24,23 @@ Exemplo:
 
     P = {
 
-        S -> '?' var               LA = {'?'}
-           | '!' Expr              LA = {'!'}
-           | var '=' Expr          LA = {var}
-        
+        S -> '?' var              LA = {'?'}
+           | '!' Expr             LA = {'!'}
+           | var '=' Expr         LA = {var}
+    
         Expr -> Expr2 Op
 
-        Op -> &
-            | '+' Expr             LA = {'+'}
-            | '-' Expr             LA = {'-'}
+        Op -> &                   LA = Follow(Op) = Follow(Expr) = {')'}
+            | '+' Expr            LA = {'+'}
+            | '-' Expr            LA = {'-'}
         
         Expr2 -> Expr3 Op2
 
-        Op2 -> &
-             | '*' Expr2           LA = {'*'}
-             | '/' Expr2           LA = {'/'}
+        Op2 -> &                  LA = Follow(Op2) = Follow(Expr2) = {')','+','-'}
+             | '*' Expr           LA = {'*'}
+             | '/' Expr           LA = {'/'}
         
-        Expr3 -> '(' Expr ')'      LA = {'('}
-               | var               LA = {var}
-               | num               LA = {num}
+        Expr3 -> '(' Expr ')'     LA = {'('}
+               | var              LA = {var}
+               | num              LA = {num}
     }
